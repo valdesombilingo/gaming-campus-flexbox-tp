@@ -1,0 +1,511 @@
+/* STYLE CSS */
+
+/* Lien Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+
+/* Variables CSS */
+:root {
+  /* Couleurs */
+  --color-light: #ffffff; /* Blanc */
+  --color-ligth-gray: #f7f7f7; /* Gris clair */
+  --color-gray: #e2e2e2; /* Gris clair */
+  --color-purple: #5f04aa; /* Mauve */
+  --color-ligth-purple: #9f37f3; /* Mauve clair */
+  --color-dark: #151515; /* Noir */
+
+  /* Typographie*/
+  --font-roboto-flex: "Roboto Flex", sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles globaux pour le body */
+body {
+  font-family: var(--font-roboto-flex);
+  background: var(--color-light);
+  color: var(--color-dark);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  min-height: 100vh;
+}
+
+/* Styles globaux pour les titres */
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 1rem;
+  color: var(--color-light);
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 0.75rem;
+}
+
+p {
+  font-size: 0.75rem;
+}
+
+/* liens */
+a {
+  text-decoration: none;
+  font-size: 0.75rem;
+}
+
+/* listes */
+ul {
+  list-style: none;
+}
+
+/* Boutons */
+button {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: var(--font-roboto-flex);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.25rem;
+  background: transparent;
+  color: var(--color-light);
+  border: 1px solid var(--color-light);
+  padding: 1rem 3rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: var(--color-light);
+  color: var(--color-dark);
+}
+
+/* HEADER */
+.header__nav ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.header__nav a {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.link-hover-purple:hover,
+.link-hover-purple:focus {
+  color: var(--color-ligth-purple);
+}
+
+.lang-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-gray);
+  text-align: center;
+  padding: 0 0.75rem;
+  border-radius: 1rem;
+}
+
+/* MAIN  */
+/* HERO */
+.hero-overlay {
+  background: url(assets/img/gaming-campus-img/bg.jpg) no-repeat center/cover;
+  background-attachment: fixed;
+  min-height: 70vh;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.233);
+}
+
+.hero-logo {
+  margin: 1rem;
+}
+
+.hero-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-btn .fa-solid.fa-angle-right {
+  position: absolute;
+  margin-left: 1rem;
+  opacity: 0;
+  transform: translateX(-1rem);
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover .fa-solid.fa-angle-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ABOUT */
+
+.about {
+  align-content: center;
+  text-align: center;
+  padding: 3rem 0;
+  width: 75%;
+  min-height: 20%;
+  margin: 0 auto;
+}
+
+.about p {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------- */
+
+/* PROGRAMS  */
+.programs {
+  background: var(--color-dark);
+}
+
+.programs-container {
+  color: var(--color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  padding-bottom: 3rem;
+  margin: 0 auto;
+}
+
+.programs-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 0 0.5rem 1rem;
+  margin-top: 3rem;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.programs-item:hover,
+.programs-item:focus {
+  background: rgba(255, 255, 255, 0.034);
+  border-radius: 0.5rem;
+}
+
+.programs-item img {
+  user-select: none;
+  width: 75%;
+  margin: 3rem;
+}
+
+.programs-item p {
+  font-weight: 300;
+  padding: 0 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.programs-item button {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 2rem;
+}
+
+.programs-item button .fa-solid.fa-angle-down {
+  position: absolute;
+  margin-left: 0.5rem;
+  opacity: 0;
+  transform: translateY(-0.5rem);
+  transition: all 0.3s ease;
+}
+
+.programs-item button:hover .fa-solid.fa-angle-down {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------- */
+/* NEWS SECTION  */
+.news {
+  background: var(--color-ligth-gray);
+}
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 65%;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+.news-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-top h2 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.25rem;
+}
+
+.news-top p {
+  font-weight: 600;
+}
+
+.news-top button {
+  position: relative;
+  border: 1px solid var(--color-dark);
+  color: var(--color-dark);
+  overflow: hidden;
+  padding: 0.75rem 1.5rem;
+}
+
+.news-top button:hover {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+.news-top button .fa-solid.fa-angle-right {
+  position: absolute;
+  margin-left: 0.4rem;
+  opacity: 0;
+  transform: translateX(-0.4rem);
+  transition: all 0.3s ease;
+}
+
+.news-top button:hover .fa-solid.fa-angle-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.news-article {
+  display: flex;
+  justify-content: space-between;
+  gap: 5.5rem;
+}
+
+article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  gap: 1rem;
+}
+
+article img {
+  max-width: 100%;
+  border-radius: 0.125rem;
+  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.405);
+}
+
+.news__item--content {
+  width: 80%;
+}
+
+article p {
+  padding-bottom: 3rem;
+}
+
+article a {
+  position: absolute;
+  bottom: 0;
+  text-transform: uppercase;
+}
+
+article .fa-solid.fa-angle-right {
+  margin-left: 0.5rem;
+}
+
+/* -------------------------------------------------------- */
+
+/* FOOTER */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contacts division (logo, infos, parents, contact) */
+.footer-top-content {
+  display: flex;
+  padding: 3rem 0;
+  gap: 5rem;
+  width: 70%;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.footer-link {
+  color: var(--color-purple);
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: var(--color-ligth-purple);
+  text-decoration: underline;
+}
+
+.footer-top-content i {
+  color: var(--color-dark);
+  margin: 0 10px 0 0;
+}
+
+.footer-gc-logo,
+.footer-infos,
+.footer-parents,
+.footer-contacts {
+  width: 100%;
+}
+
+.footer-infos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.footer-parents {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+#contact-us {
+  margin-bottom: 1rem;
+}
+
+.social-networks i {
+  transition: all 0.2s ease-in-out;
+}
+
+.social-networks i:hover {
+  color: var(--color-ligth-purple);
+}
+
+/* PRESS */
+.press {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  width: 75%;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+.press-text P {
+  font-weight: 600;
+}
+
+.press-logos,
+.partners-logos {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.press-logo {
+  max-width: 4rem;
+}
+
+/* PARTENER */
+.partners {
+  background: var(--color-dark);
+}
+
+.partners-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem 0 3.5rem 0;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.partners h2 {
+  font-weight: 300;
+  margin-bottom: 0;
+  color: var(--color-light);
+}
+
+.partners-logo-small {
+  width: 4.5rem;
+}
+
+.partners-logo-big {
+  width: 2.5rem;
+}
+
+/* CHALLENGE */
+.challenge {
+  font-weight: 300;
+  color: var(--color-light);
+  text-align: center;
+  padding-bottom: 0.5rem;
+  font-size: 0.7rem;
+}
+
+.challenge a {
+  font-weight: 300;
+  color: var(--color-light);
+  font-size: 0.7rem;
+}
+
+.challenge a:hover,
+.challenge a:active {
+  color: var(--color-ligth-purple);
+  text-decoration: underline;
+}
